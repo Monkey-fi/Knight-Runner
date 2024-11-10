@@ -34,10 +34,15 @@ public class Button : MonoBehaviour
     {
         SceneManager.LoadScene(5);
     }
+    
+    public void LevelScene()
+    {
+        SceneManager.LoadScene(6);
+    }
 
     public void Score()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(7);
     }
 
     public void QuitGame()
