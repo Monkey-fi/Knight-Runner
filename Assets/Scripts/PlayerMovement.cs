@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
             Jump();
             isGround = false;
             animator.SetBool("Running Jump", true);
+            isGround = true;
         }
     }
 
@@ -27,14 +28,5 @@ public class PlayerMovement : MonoBehaviour
         Vector2 velocity = rb.velocity;
         velocity.y = jumpHeight;
         rb.velocity = velocity;
-    }
-
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-        {
-            isGround = true;
-            animator.SetBool("Running Jump", false);
-        }
     }
 }

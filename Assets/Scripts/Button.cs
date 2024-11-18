@@ -35,17 +35,18 @@ public class Button : MonoBehaviour
         SceneManager.LoadScene(5);
     }
 
-    public void Score()
-    {
-        SceneManager.LoadScene(6);
-    }
-
     public void QuitGame()
     {
         Application.Quit();
     }
 
     public GameObject pausePanel;
+    public GameObject scoreboard;
+
+    public void Score()
+    {
+        scoreboard.SetActive(true);
+    }
 
     public void Pause()
     {
